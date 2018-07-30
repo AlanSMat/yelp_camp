@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <h1 style="text-align:center;">Add New Address <%= campground.name %></h1><br />
+    <div class="row">
+        <div style="width: 30%; margin:auto">
+            <form method="post" action="/campgrounds/<%= campground._id %>/address">
+                <div class="form-group">
+                    <label for="address[street_address]">Street Address</label>
+                    <input class="form-control" type="text" name="address[street_address]" value="<%= address.street_addess %>" />
+                </div>
+                <div class="form-group">
+                    <label for="address[city]">City</label>
+                    <input class="form-control" type="text" name="address[city]" value="<%=address.city%>" />
+                </div>
+                <div class="form-group">
+                <label for="address[Suburb]">Suburb</label>
+                    <input class="form-control" type="text" name="address[suburb]" value="<%=address.suburb%>" />
+                </div>
+                <div class="form-group">
+                <label for="address[postcode]">Postcode</label>
+                    <input class="form-control" type="text" name="address[postcode]" value="<%=address.postcode%>" />
+                </div>
+                <div class="form-group">
+                    <label for="address[country]">Country</label>
+                    <input class="form-control" type="text" name="value="<%=address.country" />
+                </div>                
+                <div class="form-group">
+                    <input class="btn btn-primary btn-lg btn-default btn-block" type="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

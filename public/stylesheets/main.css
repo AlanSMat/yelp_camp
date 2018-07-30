@@ -1,0 +1,19 @@
+.thumbnail img {
+    width: 100%
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.commentButtonRow {
+    padding:0px 0px 7px 16px;
+}
