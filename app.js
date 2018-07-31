@@ -33,7 +33,7 @@ app.use(flash());
 app.use(require("express-session")({ 
     secret: "I love my cats Loki and Diggy",
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false 
 }));
 
 app.use(passport.initialize());
@@ -55,7 +55,7 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments",commentRoutes);
 app.use("/campgrounds/:id/address",addressRoutes);
 
-var port = process.env.PORT || 8081; 
+var port = process.env.PORT || 8080; 
 app.listen(port, process.env.IP, function() {
     console.log("Server has started on port " + port + "!!");
 });
