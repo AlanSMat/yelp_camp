@@ -28,6 +28,12 @@ var data = [
         thumb_image: "https://farm1.nzstatic.com/_proxy/imageproxy_1y/serve/whangarei-fallsjpg.jpg?backgroundcolour=white&height=169&outputformat=jpg&quality=75&source=3127858&transformationratio=1.3&transformationsystem=autoboxfit&width=300&securitytoken=5D5C3DE3FBC764A9DC9DB880F83E00D8",
         main_image: "https://farm1.nzstatic.com/_proxy/imageproxy_1y/serve/beautiful-whangarei-falls.jpg?height=406&outputformat=jpg&quality=85&source=3127859&transformationratio=1.3&transformationsystem=autoboxfit&width=720&securitytoken=1757562B243DB31FDC9A71998D9BE6A0",
         description: "We are a cosy holiday park and backpackers in a semi-rural setting two-minutes’ walk away from the beautiful Whangarei Falls and scenic walking tracks. Stroll to town along bush-lined riverside walks, or laze the day away beside the swimming pool. Evenings are for soaking in the hot tub and sharing stories around the BBQ."
+    },
+    {
+        name: "Spring Creek",
+        thumb_image: "https://farm1.nzstatic.com/_proxy/imageproxy_1y/serve/whangarei-fallsjpg.jpg?backgroundcolour=white&height=169&outputformat=jpg&quality=75&source=3127858&transformationratio=1.3&transformationsystem=autoboxfit&width=300&securitytoken=5D5C3DE3FBC764A9DC9DB880F83E00D8",
+        main_image: "https://farm1.nzstatic.com/_proxy/imageproxy_1y/serve/beautiful-whangarei-falls.jpg?height=406&outputformat=jpg&quality=85&source=3127859&transformationratio=1.3&transformationsystem=autoboxfit&width=720&securitytoken=1757562B243DB31FDC9A71998D9BE6A0",
+        description: "We are a cosy holiday park and backpackers in a semi-rural setting two-minutes’ walk away from the beautiful Whangarei Falls and scenic walking tracks. Stroll to town along bush-lined riverside walks, or laze the day away beside the swimming pool. Evenings are for soaking in the hot tub and sharing stories around the BBQ."
     }
 ]
 
