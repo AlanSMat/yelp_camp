@@ -20,17 +20,17 @@ mongoose.connect(dbUrl,{ useNewUrlParser: true },function(err, db){
 
 app.get("/", function(req, res){    
     //lookup campground using ID
-    res.render("index.ejs");
+    res.render("test.ejs");
 });
 
-app.get("/about", function(req, res){    
+//app.get("/about", function(req, res){    
     //lookup campground using ID
-    res.render("about.ejs");
-});
+  //  res.render("about.ejs");
+//});
 
 //console.log(process.env.PORT);
 
-var port = process.env.PORT || 8080; 
+var port = process.env.PORT || 8081; 
 app.listen(port, process.env.IP, function() {
     console.log("Server has started on port " + port + "!!");
 });
