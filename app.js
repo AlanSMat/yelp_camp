@@ -19,17 +19,17 @@ var commentRoutes    = require("./routes/comments"),
     addressRoutes    = require("./routes/address"),
     indexRoutes      = require("./routes/index");
 
-//mongoose.connect("mongodb://localhost:27017/yelp_camp",{ useNewUrlParser: true });
+//var dbUrl = "mongodb://localhost:27017/yelp_camp";
+var dbUrl = "mongodb://stevedbm:B4ttl3ForD@cluster0-shard-00-00-dmfzn.mongodb.net:27017,cluster0-shard-00-01-dmfzn.mongodb.net:27017,cluster0-shard-00-02-dmfzn.mongodb.net:27017/yelp_camp_rm?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true";
 
-//var uriTestDb = "mongodb://Astev:cAmp4A!gn@mycluster0-shard-00-00.mongodb.net:27017,mycluster0-shard-00-01.mongodb.net:27017,mycluster0-shard-00-02.mongodb.net:27017/test?ssl=true&replicaSet=Mycluster0-shard-0&authSource=admin";
-var uriTestDb = "mongodb://Astev:cAmp4A!gn@cluster0-shard-00-00-dmfzn.mongodb.net:27017,cluster0-shard-00-01-dmfzn.mongodb.net:27017,cluster0-shard-00-02-dmfzn.mongodb.net:27017/yelp_camp?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true"
-mongoose.connect(uriTestDb,{ useNewUrlParser: true },function(err){
-//mongoose.connect(uriTestDb,function(err){
+mongoose.connect(dbUrl,{ useNewUrlParser: true },function(err, db){
     if(err) {
-        console.log(err);
+        throw err
+    } else {
+       console.log("Connected to db " + db.name); 
     }
 });
-/*
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set("view engine","ejs");
@@ -63,7 +63,7 @@ app.use(indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments",commentRoutes);
 app.use("/campgrounds/:id/address",addressRoutes);
-*/
+
 var port = process.env.PORT || 8081; 
 app.listen(port, process.env.IP, function() {
     console.log("Server has started on port " + port + "!!");
