@@ -19,12 +19,9 @@ var commentRoutes    = require("./routes/comments"),
     addressRoutes    = require("./routes/address"),
     indexRoutes      = require("./routes/index");
 
-var dbUrl = "mongodb://localhost:27017/yelp_camp";
-//var dbUrl = "mongodb://stevedbm:B4ttl3ForD@cluster0-shard-00-00-dmfzn.mongodb.net:27017,cluster0-shard-00-01-dmfzn.mongodb.net:27017,cluster0-shard-00-02-dmfzn.mongodb.net:27017/yelp_camp_rm?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true";
+var DBURL = process.env.DBURL || "mongodb://localhost:27017/yelp_camp";
 
-console.log(process.env.DBURL);
-
-mongoose.connect(process.env.DBURL,{ useNewUrlParser: true },function(err, db){
+mongoose.connect(DBURL,{ useNewUrlParser: true },function(err, db){
     if(err) {
         throw err
     } else {
