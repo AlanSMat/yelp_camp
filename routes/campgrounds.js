@@ -36,8 +36,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
     Campground.create(newCampground, function(err, newlyCreated) {
         if(err) {
             console.log(err);    
-        } else {
-            //console.log(newlyCreated);
+        } else {            
             req.flash("success","Campground added successfully!");
             res.redirect("/campgrounds/" + newlyCreated._id + "/address/new");
         }

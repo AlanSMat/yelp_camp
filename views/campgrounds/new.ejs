@@ -4,14 +4,14 @@
     <h1 style="text-align:center;">Create a New Campground</h1><br />
     <div class="row">
         <div style="width: 30%; margin:auto">
-            <form method="post" action="/campgrounds" enctype="multipart/form-data">
+            <form method="post" action="/campgrounds">
                 <div class="form-group"> 
                     <label for="name">Name</label>
                     <input class="form-control" type="text" name="campground[name]" placeholder="add campground" />
                 </div>
                 <div class="form-group">
                     <label for="thumb_image">Thumb Image</label>
-                    <input class="form-control" type="file" name="campground[thumb_image]" placeholder="add thumbnail image" />
+                    <input class="form-control" type="text" name="campground[thumb_image]" placeholder="add thumbnail image" />
                 </div>
                 <div class="form-group">
                     <label for="main_image">Main Image</label>
