@@ -25,31 +25,19 @@ router.get("/new", middleware.isLoggedIn, function(req,res){
 
 //CAMPGROUNDS CREATE POST
 router.post("/", middleware.isLoggedIn, function(req, res){
-    
-    var name             = req.body.name;
-    var thumb_image      = req.body.thumb_image;
-    var main_image       = req.body.main_image;
-    var price            = req.body.price;
-    var location         = req.body.location;    
-    var desc             = req.body.desc;
-    var author           = {
+
+    var newCampground    = req.body.campground;
+    newCampground.author = {
         id: req.user._id,
         username: req.user.username
     };
-    var newCampground = {name: name, 
-                         thumb_image: thumb_image, 
-                         main_image: main_image,
-                         price: price,
-                         location: location,
-                         description: desc,
-                         author: author
-    };
+
     //create a new campground and save to db
     Campground.create(newCampground, function(err, newlyCreated) {
         if(err) {
             console.log(err);    
         } else {
-            console.log(newlyCreated);
+            //console.log(newlyCreated);
             req.flash("success","Campground added successfully!");
             res.redirect("/campgrounds/" + newlyCreated._id + "/address/new");
         }
@@ -63,9 +51,8 @@ router.get("/:id",function(req,res){
             console.log(err);
             req.flash("error", "Campground not found!");
             res.redirect("back");
-        } else {
-            //console.log(foundCampground);            
-            res.render("campgrounds/show", {campground: foundCampground}); 
+        } else {            
+            res.render("campgrounds/showTest", {campground: foundCampground}); 
         }
     });    
 });
@@ -76,7 +63,7 @@ router.get("/:id/edit", middleware.checkCampgroundOwnership, function(req,res){
         if(err) {
             console.log(err);
             res.redirect("/campgrounds");
-        } else {            
+        } else {                    
             req.flash("success","Campground edited successfully!");            
             res.render("campgrounds/edit",{campground: foundCampground});
         }

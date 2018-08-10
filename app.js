@@ -64,6 +64,7 @@ app.use("/campgrounds/:id/comments",commentRoutes);
 app.use("/campgrounds/:id/address",addressRoutes);
 
 var port = process.env.PORT || 8081; 
+
 app.listen(port, process.env.IP, function() {
     console.log("Server has started on port " + port + "!!");
 });
